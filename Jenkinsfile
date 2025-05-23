@@ -7,9 +7,11 @@ pipeline {
         stage ('mvn install'){
             steps{
                 script {
-                 mvn clean install
-                 echo 'success mvn'
-                }
+                sh '''
+		 mvn clean install
+                 echo "success mvn"
+                '''
+		}
             }
         }
         stage ('build') {
