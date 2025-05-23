@@ -4,11 +4,6 @@ pipeline {
         JAVA_IMAGE = 'selmi1999/java-spring-image:latest'
     }
     stages {
-        stage('github') {
-            steps {
-                git url:'https://github.com/SelmiNazeeb/practising-jenkins-java' , branch:'develop'
-            }
-        }
         stage ('mvn install'){
             steps{
                 script {
